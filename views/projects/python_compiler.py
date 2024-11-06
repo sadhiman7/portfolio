@@ -21,7 +21,6 @@ with col[0]:
     if st.button('Run Code', type='primary'):
         with col[1]:
             try:
-                exec(cc)
                 f = StringIO()
                 with redirect_stdout(f):
                     lexec(cc)
