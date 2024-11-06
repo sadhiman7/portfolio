@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 about_page = st.Page(
     page = 'views/about_me.py',
@@ -6,15 +7,16 @@ about_page = st.Page(
     default=True
 )
 
-project_page = st.Page(
-    page = 'views/projects.py',
-    title = 'Projects'
-)
+projects = [ st.Page(
+    page = f'views/projects/{i}',
+    title = ' '.join([x.capitalize() for x in i[:-3].split('_')])
+) for i in os.listdir('views/projects')
+]
 
 pg = st.navigation(
     pages={
         'Info': [about_page],
-        'Projects': [project_page]
+        'Projects': projects
         }
     )
 
