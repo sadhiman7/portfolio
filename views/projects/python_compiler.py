@@ -6,6 +6,7 @@ from contextlib import redirect_stdout
 st.set_page_config(page_title='Python Compiler', layout='wide')
 
 st.title('Python Compiler')
+st.error('Currently the compiler is disabled due to safety reasons!')
 
 col = st.columns(2)
 
@@ -23,9 +24,9 @@ with col[0]:
                 exec(cc)
                 f = StringIO()
                 with redirect_stdout(f):
-                    exec(cc)
+                    lexec(cc)
                 s = f.getvalue()
             # print('s', s)
                 st.code(s)
             except Exception as e:
-                st.error(e)
+                st.error('Compiler is disabled due to safety reasons!')
