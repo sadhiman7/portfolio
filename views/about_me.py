@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 def contact_form():
     st.write('Work in Progress!')
 
-st.set_page_config(page_title = "Sadhiman Das",page_icon="🚀")
+# st.set_page_config(page_title = "Sadhiman Das",page_icon="🚀")
 
 c1, c2 = st.columns(2, gap='small', vertical_alignment='center')
 
@@ -35,6 +35,8 @@ if selected == 'About Me':
     - 🚀 My expertise includes developing advanced solutions using Computer Vision and NLP in the BFSI domain, fine-tuning and deploying Generative AI-based solutions, and managing machine learning projects. 
     - 💡 I am passionate about leveraging AI to drive innovation and solve complex business challenges. 
     ''')
+    st.divider()
+    st.markdown('![Leetcode Stats](https://leetcard.jacoblin.cool/sadhiman7?theme=nord&ext=activity)', help='hello')
 
 if selected == 'Work':
 

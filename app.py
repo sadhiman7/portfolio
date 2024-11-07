@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 
+st.set_page_config(page_title='Sadhiman Das', layout='wide',page_icon="🚀")
+
 about_page = st.Page(
     page = 'views/about_me.py',
     title = 'About Me',

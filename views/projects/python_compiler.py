@@ -3,9 +3,7 @@ from streamlit_ace import st_ace
 from io import StringIO
 from contextlib import redirect_stdout
 
-st.set_page_config(page_title='Python Compiler', layout='wide')
-
-st.title('Python Compiler')
+st.title(''.join([f'\u0336{i}' for i in 'Python Compiler']))
 st.error('Currently the compiler is disabled due to safety reasons!')
 
 col = st.columns(2)
